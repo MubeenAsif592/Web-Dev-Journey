@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolean</title>
+</head>
+<body>
+    <script>
+        //boolean
+        console.log(typeof(6 > 9));
+        console.log(6 > 5 );
+        console.log(5 == 5);
+        console.log(5 == '5');
+        console.log (5 === 5 );
+        console.log(5 === '5' );
+
+        console.log( 5+5 === 6+4);
+
+
+        //if else 
+        // console.log("Checking if you can drive");
+        // let age = 18;
+        // if(age>=18){
+        //     console.log('You can drive');
+        // }
+        // else if(age<18){
+        //     console.log('You are not eligible for drive');
+        // }
+
+        //if else alternative
+        //Ternary operator
+        // let age = 12;
+        // let result = age > 18 ? 'Adjult' : 'Kid';
+        // console.log(result);
+
+        //Garud operator
+        // let age = 32;
+        // let finalAge = age || 18;
+        // console.log(age);
+        // console.log(finalAge);
+        // if age will not defined then it will show the final age like 18
+
+        //default operator will operator used mostly cases, as age will be 0
+          let age = 19;
+        let finalAge = age ?? 18;
+        console.log(age);
+        console.log(finalAge);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+h1{
+    align-items: center;
+    color: red;
+}
+button{
+    align-items: center;
+    border: none;
+}
+#click-me{
+    font-size: larger;
+    color: rgb(196, 83, 8);
+}
+.click-me{
+    font-size: larger;
+    color: green;
+}
+#bag{
+    font-size: larger;
+    color: rgb(27, 83, 185);
+    background-color: aquamarine;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+#wishlist{
+    font-size: larger;
+    color: blueviolet;
+    background-color: chartreuse;
+    padding: 5px 30px;
+    border: 3px solid black;
+    border-radius: 5px;
+}

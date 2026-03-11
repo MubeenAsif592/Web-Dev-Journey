@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <script>
+        let age = 21;
+        function printAge(){
+            console.log(`Your age is ${age}`);
+        }
+        printAge();
+        
+        age = 76;
+        printAge();
+        age = 1;
+        printAge();
+
+        // retrun value with function
+
+        function generateRandomMove(){
+            let random = Math.random();
+            let randomMove = random * 3;
+            return randomMove;
+        }
+        console.log(generateRandomMove());
+        console.log(generateRandomMove());
+        console.log(generateRandomMove());
+        console.log(generateRandomMove());
+
+        //Another example
+        function determineDriveStatus(){
+            let age ;
+            if (age === undefined){
+                return 'Ap avtaar hain';
+            }
+            console.log('Checking drive status');
+
+            if (age > 18){
+                return 'You can drive';
+            }
+            else{
+                return 'Use a Bicycle';
+            }
+        }
+        console.log(determineDriveStatus());
+
+
+        //function with parameter
+        function sum(a,b){
+            let sum = a + b;
+            return sum;
+        }
+        console.log(sum(4,5));
+
+        //2nd example
+        function greeting(name = 'Pyaare'){
+            console.log(`AoA ${name}`);
+        }
+        greeting();
+    </script>
+</body>
+</html>

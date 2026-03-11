@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Practice</title>
+</head>
+<body>
+    <script>
+        //withhout function
+        let num=4;
+        if (num%2 === 0){
+            console.log('Number is even');
+        }
+        else{
+            console.log('Number is odd');
+        }
+        let num1 = 5, num2 = 6;
+        if(num1>num2){
+            console.log('Num1 is greater than num2');
+        }
+        else{
+            console.log('Num2 is greater than num1');
+        }
+        let celsius = 62;
+        let Fahrenheit;
+        Fahrenheit = (9/5) * celsius + 32;
+        console.log(Fahrenheit);
+
+        // with function
+        function isOdd(number){
+            let rem = number % 2;
+            let isOdd = rem == 1;
+            return isOdd;
+        }
+        console.log(isOdd(5));
+        console.log(isOdd(15));
+        console.log(isOdd(100));
+
+        function larger(n1, n2){
+            if(n1>n2){
+                return n1;
+            }
+            else{
+                return n2;
+            }
+        }
+        console.log(larger(5,10));
+        console.log(larger(15,10));
+        console.log(larger(25,20));
+
+        function toFarenheight(celsuisValue){
+            return (9/5) * celsuisValue +32;
+        }
+        console.log(toFarenheight(5));
+        console.log(toFarenheight(50));
+    </script>
+</body>
+</html>
