@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JSON</title>
+</head>
+<body>
+    <script>
+        let product = {
+            name: 'Tshirt',
+            price: 789,
+            rating: {
+                starts: 4.5,
+                noOfReviews: 453,
+            }
+
+        };
+        // //stringify convert object to string
+        // console.log(typeof product);
+        // console.log(product);
+        // let str = JSON.stringify(product);
+        // console.log(typeof str);
+        // console.log(str);
+
+        // //parse convert string to object
+        // let newProduct = JSON.parse(str);
+        // console.log(typeof newProduct);
+        // console.log(newProduct);
+        //JSON is a data formate, JS object is a data structure
+
+        localStorage.setItem('Name', 'Pant');
+        localStorage.setItem('Price', '87764');
+        // console.log(localStorage.getItem('Name'));
+        // console.log(localStorage.getItem('Price'));
+
+        // localStorage.setItem('product', JSON.stringify(product));
+        // console.log(localStorage.getItem('product'));
+
+        // let product2 = JSON.parse(localStorage.getItem('product'));
+        // console.log(product2);
+
+        // what local storage do
+        // persisten data storage in the browser
+        //setItem: stores data as key-value pairs.
+        //Only string can be stored
+        //getItem: Retreives data based on key.
+        //Other methods: localStoreage.clear(), removeItem().
+        //Do not store sensitive information. Viewable in storage console.
+
+        // localStorage.removeItem('Price');
+        localStorage.clear();
+    </script>
+</body>
+</html>
