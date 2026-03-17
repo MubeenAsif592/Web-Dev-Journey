@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        body{
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="circket-with-json.css">
     <title>Cricket Game</title>
 </head>
 <body>
@@ -15,32 +11,46 @@
         let commputerChoice;
         let resultMsg;
     </script>
-    <button onclick="
+
+    
+    <button class="choice-button" onclick="
     console.log('You have chosen Bat');
     commputerChoice = generateComputerChoice();
     resultMsg = getResult('Bat', commputerChoice);
     showResult('Bat',commputerChoice,resultMsg);
-    ">Bat</button>
+    ">
+        <img src="images/bat.jpeg" alt="Bat image" class="choice-image">
+    </button>
 
-    <button onclick="
+    <button class="choice-button" onclick="
     console.log('You have chosen Ball');
     commputerChoice = generateComputerChoice();
     resultMsg =getResult('Ball', commputerChoice);
 
     showResult('Ball',commputerChoice,resultMsg);
-    ">Ball</button>
+    ">
+        <img src="images/Ball.jpg" alt="Ball image" class="choice-image">
+    </button>
 
 
-    <button 
+    <button class="choice-button"
     onclick="
     console.log('You have chosen Stump');
     commputerChoice = generateComputerChoice();
     resultMsg = getResult('Stump',commputerChoice);
     showResult('Stump',commputerChoice,resultMsg);
-    ">Stump</button>
+    ">
+       <img src="images/wicket.jpeg" alt="Stump image" class="choice-image">
+    </button>
 
-    <button onclick="localStorage.clear(), resetScore();">Reset</button>
+   
 
+    <h3 id="user-move"></h3>
+    <h3 id="computer-move"></h3>
+    <h3 id="result"></h3>
+    <h3 id="score"></h3>
+
+     <button onclick="localStorage.clear(), resetScore() , showResult();">Reset</button>
     <script>
         let scoreStr = localStorage.getItem('score');
         let score;
@@ -54,9 +64,11 @@
             
         };
         score.displayScore = function(){
-                return `No of mamtches won: ${score.win}, Lost: ${score.lost}, Tie: ${score.tie}`;
+                return ` Won: ${score.win}, Lost: ${score.lost}, Tie: ${score.tie}`;
             };
         }
+
+        showResult();
         
         function generateComputerChoice (){
              //This will generate random number b/w 0 and 3
@@ -118,12 +130,23 @@
         }
 
         function showResult(userMove,computerMove, result){
-              // usesr json.stringfy()
+              // user json.stringfy()
               localStorage.setItem('score',JSON.stringify(score));
-               console.log(score);
-              alert(`You have chosen ${userMove}, Computer choice is ${computerMove} and ${result}
+                // undefined removal will not affect of this code
+              document.querySelector('#user-move').innerText = userMove /*!== undefined*/ ? `You have chosen ${userMove}` : '';
+
+              document.querySelector('#computer-move').innerText = computerMove ? `Computer choice is ${computerMove}` : '';
+                // no need for the turnery operator in below code, as if we use or operator it work as it is
+              document.querySelector('#result').innerText = result /*? result :*/ || '';
+
+              document.querySelector('#score').innerText = score.displayScore();
+
+
+            //previous method, 
+            //    console.log(score);
+            //   alert(`You have chosen ${userMove}, Computer choice is ${computerMove} and ${result}
               
-              ${score.displayScore()}`);
+            //   ${score.displayScore()}`); 
         }
     </script>
 </body>
