@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+  <!-- 
+  What is array?
+  An array is just a  list of valuese 
+  start with 0 
+  used fro storing multiple vlaues in a single variable
+
+  use [] to create array
+  syntex rules:
+  Brackets start and end the array 
+  .values separated by commas.
+  .can span multiple linnes
+  Arrays can hold any value, including arrays
+  typeof operator on array return object. 
+   -->
+    <script>
+         let myArray = [2 , 'KG CODING', null, true
+         ,{likes: '1 MIllion'}];
+         console.log(myArray);
+         console.log(myArray.length);
+
+         let numbers = [ 1, 4 ,3, 7, 5 , 6 , 7 , 2 ]
+         console.log(numbers);
+         console.log(numbers[5]);
+
+         let sec = [1, true, null, 'asdfasd'];
+         console.log(sec);
+    /* 
+    Properties
+        array.isArray
+        .length
+        .push & pop (add or remove to end)
+        .shift / unshift same as push & pop (add or remove from front)
+        .splices: Add or remove elements
+        .toString: convert to string
+        .sort: sort elements
+        .valueOf: get array itself
+
+        Arrays are also a reference like objects
+        De-structuring also works for arrays.
+    */  
+        let obj = {lkj: 98};
+        console.log(Array.isArray(myArray));
+        console.log(Array.isArray(obj));
+
+        let arr = [1,2,3];
+        console.log(arr);
+        arr.push(6);
+        console.log(arr);
+
+        arr.pop();
+        console.log(arr);
+        //2nd way
+        console.log('popped ' + arr.pop());
+        console.log(arr);
+
+        //splice
+        let arr1 = [1, 2, 3, 4, 5 ,6 ];
+        arr1.splice(0,3);
+        console.log(arr1);4
+        
+        //tostring
+        let arr2 = [2,3,4,5];
+        console.log(arr2.toString());
+         
+        //sort
+        let arr4 = [3,4,2, 7, 9, 8];
+        console.log(arr4);
+        arr4.sort();
+        console.log(arr4);
+        
+        //value
+        console.log(arr4.valueOf());
+
+        // array work for reference as well
+        // let arr5 = arr4;
+        // arr5[0] = 9;
+        // console.log(arr4);
+
+        //destructuring
+        let [a,b,c,d,e,f] = arr4;
+        console.log(a + " " + b + " " + c + " " + d + " " + e + " " + f);
+    </script>
+</body>
+</html>
