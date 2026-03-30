@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+<body>
+    <script>
+        /*
+        Code that runs multiple times based on condition
+        Loop also alter the flow of execution, simimlar to functions
+        .Function: Reuseable blocks of code
+        .Loops: Repeated execution of code
+        Loops automate repetitive
+        type of loops: for , while, do while
+        Iterations: Numbers of times the loops runs
+        */
+
+        /*
+        While loop
+        Used for non-standard conditions  ()
+        Repeating a block of code while a condition is true.
+        Always iclude an update to avoid infinite loops
+        */
+       let num = 1;  //initialization
+       while(num<=10){ //condition
+        console.log(num);
+        num++;  //updating is very important, otherwise system will be hanged
+       }
+       console.log('Final value of num is: ' + num );
+
+       //non standard condition example (loop will not depend on update)
+       //like loop will work 1 time or 100 time
+       // and in these type of loops we use the while loop
+       //most important thing, avoid infinite loops. 
+       let x = 0;
+       while(x<1){
+        console.log(x);
+        x = Math.random() * 2;
+       }
+       console.log('Final value of x is: ' + x);
+
+
+       /*
+       do while loop
+       Execute block first, then check condition
+       Guaranted to run at least one iteration
+       Unlike while, first iteration is unconditional.
+       Don't forget to update condition to avoid infinite loops.
+       */
+
+       let num1 = 0; // initialization
+       do{
+        console.log(num1);
+        num1++; // updating (don't forget for updating)
+       }while(num1 < 5); //condition
+       //if  we used num1 > 5 then it will execute one time and show 0
+       
+
+       /*For Loop*/
+
+       // for(let nume = 1 /*Initialisation*/; nume<=10 /*condition*/; nume++/*update*/){
+        //     console.log(nume);
+        // }
+
+        //example
+
+        let nums = [4,56,8,6,7,8,9,10,8,6,5,3,2,1];
+        for(let i = 0; i < nums.length; i++){
+            console.log(nums[i]);
+        } 
+    </script>
+</body>
+</html>
