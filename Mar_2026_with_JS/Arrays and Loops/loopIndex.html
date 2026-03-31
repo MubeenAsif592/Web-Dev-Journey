@@ -16,7 +16,7 @@
         type of loops: for , while, do while
         Iterations: Numbers of times the loops runs
         */
-
+        console.log('While Loop');
         /*
         While loop
         Used for non-standard conditions  ()
@@ -41,6 +41,7 @@
        }
        console.log('Final value of x is: ' + x);
 
+       console.log('Do While loop');
 
        /*
        do while loop
@@ -57,7 +58,7 @@
        }while(num1 < 5); //condition
        //if  we used num1 > 5 then it will execute one time and show 0
        
-
+       console.log('For Loop');
        /*For Loop*/
 
        // for(let nume = 1 /*Initialisation*/; nume<=10 /*condition*/; nume++/*update*/){
@@ -70,6 +71,63 @@
         for(let i = 0; i < nums.length; i++){
             console.log(nums[i]);
         } 
+
+
+        console.log('Accumulator Pattern');
+        //Accumulator Pattern
+        /*
+        A pattern to accumulate values through looping
+        Common scenarios:
+         Sum all the number in an array.
+         Creata a modified copy yof an array.
+        */
+
+        let numr = [3,5,6,7,7,9];
+        let sum = 0;
+        for(let i = 0;  i< numr.length; i++){
+            sum += numr[i];
+        }
+        console.log(`Sum of t he array is  ${sum}`);
+
+
+        //Square of all of the above arrays value
+        let squares = [];
+        for(let i = 0;  i< numr.length; i++){
+            squares.push(numr[i] + numr[i]);
+        }
+        console.log(squares);
+
+
+        /*Break and Continure
+        Break lets you stop a loop early, or break out of a loop
+        Continure is used to skip one iteration or the current iteration
+        In while loop remember to do the incerement manually before using continure
+        */
+        console.log('Break Statement');
+        for(let i = 0; i<50; i++){
+            console.log(i);
+            if(i === 34){
+                break;
+            }
+        }
+
+        let arr = [1,2,4,3,5,6,7,8,9];
+        for(let i = 0; i<arr.length; i++){
+            if(arr[i]===9){
+                console.log(`Number found at index ${i}`);
+                break;
+            }
+            console.log('Still looking');
+        }
+
+
+        console.log('Continue statement');
+        for (let i = 1; i<=25 ; i++){
+            if(i % 2 == 1){
+                continue;
+            }
+            console.log(i);
+        }
     </script>
 </body>
 </html>
