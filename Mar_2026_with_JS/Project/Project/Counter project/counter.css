@@ -1,0 +1,12 @@
+h2{
+    color: rgb(148, 127, 10);
+}
+#count{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    width: 70px;
+    height: 70px;
+}
+#other-btn{
+    margin-top: 25px;
+}
