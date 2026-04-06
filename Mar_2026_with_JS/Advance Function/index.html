@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance Function</title>
+</head>
+<body>
+    
+    <!--
+    Advance Functions
+    Anonymous functions AS values
+    Arrow functions
+    set Timeout & setInterval
+    Event Listener
+    For each Loop
+    Array Methods
+    -->
+    
+    <script>
+        //Anonymous Functions As values ( for example)
+       
+
+        /*
+        Functino in jS ARE first class citizens; they can be assigned to variables.
+        */
+         let sum = function (num1 , num2){
+            return num1+num2;
+        }
+        /*
+        Functions defined without a name, often assigned to a variable
+
+        Anonymous functions can be properties  in objects
+        
+        Can be passed as arguments to other functinos
+        */
+         let sumThreeNo = function (num1 , num2, num3, sumTwoNo){
+            let sum1 = sumTwoNo(num1,num2);
+            return sumTwoNo(num1,num2);
+        }
+        console.log(sumThreeNo(4,5,6,sum));
+
+
+        /*
+        Invoked using () after the function name or variable. sum(4m5);
+
+        console.log(myFunction); and typeof myFunction  will both indicate it's a function.
+
+        */
+
+        console.log(sumThreeNo);
+        console.log(typeof sumThreeNo);
+
+        //Arrow Functions
+        // in arrow function you can skip function word (only write brackets with equal and greater than )
+        //A concise way to write anonymous function.
+        let sum2 = (num1 , num2) =>{
+            return num1 + num2;
+        }
+        console.log(sum(6,8));
+
+        //For single argument: Round bracket optoinal.
+        //For single line: Curly brackets and return optional.
+        //Often used when passing functions are arguments.
+
+        let square = num => num * num;
+        
+        console.log(square(5));
+
+
+        //setTimeout & setInterval
+
+        //Function for executing code asynchonously after a delay.
+        //setTimeout runs once; setInterval runs repeatedly
+            //Syntax: setTimeout(function,time)
+            // Cancel: clearTimeout(timerID);
+        //setInterval:
+            //Syntax: setInterval(function,time)
+            //Cancel: clearInterval(intervalID)
+        
+            //Simple form function
+
+            let alaram =  function(){
+                console.log(`Its Morning get up ${new Date()}`);
+            }
+            
+            let timerId = setTimeout(alaram,5000);
+            console.log(`Alaram set: ${timerId}`);
+            clearTimeout(timerId);
+
+            //Now using narrow function
+            // setTimeout(
+            //     () => console.log('Its Morning get up'), 5000); 
+            // console.log('Alaram set');
+
+            //setInterval
+            let intervalID = setInterval(alaram,1000);
+            setTimeout(() => clearInterval(intervalID), 5000);
+
+    </script>
+</body>
+</html>

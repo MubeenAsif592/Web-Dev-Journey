@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Each Loop</title>
+</head>
+<body>
+      
+    
+    <script>
+        /*
+        A method for array iteration, often preferred for readability.
+        Linked direct to Array
+        Parameters: one for item, optionn second for index.
+        Using return is simiar to continure in tradiional loop
+        Not straightforward to break out of a forEach loop.
+        When you need to perform an action on each array element and don't need to break early.
+    
+        */
+
+        console.log('With Normal Array');
+       let arr= [3,5,8,7,5];
+       for(let i = 0; i<arr.length; i++){
+        console.log(arr[i]);
+       }
+
+       //with simple function
+       console.log('Simple function');
+       arr.forEach(function(num){
+        console.log(num)
+       }); 
+
+       console.log('With Anonymouse Function');
+       //now witht anonymouse function
+       arr.forEach(num => console.log(num));
+
+        // if you have end the any loop after a value finding, then you should not use the for each loop.         
+       
+        /*
+        Array Methods
+        1: Filter Method:
+            sysntax: array.filter(value,index) => return true/false;
+            Use: Filters elements based on condition
+        2. Map Method:
+            syntax: array.map((value) => return newValue)
+            use: Transforms each element.
+        */
+        console.log('Array Method');
+        
+        let arr2 = [1,2,3,4,5,6,7,8,9];
+        //Old way
+        let odds = arr2.filter((num,index) => {
+            if(num % 2 === 1){
+                return true;
+            }
+            else{
+                return false;
+            }
+            
+        });
+        console.log(odds);
+
+        //New way
+        console.log('New way');
+
+         let newOdds = arr2.filter((num,index) => num % 2 === 1);
+        console.log(newOdds);
+
+
+        //Map element
+        let arr3 = [1,2,3,4,5,6];
+        let squares = arr3.map((num) => num*num);
+        console.log(squares);
+        
+    </script>
+</body>
+</html>

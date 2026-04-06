@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance functions</title>
+</head>
+<body>
+    <!--Below are the simple example-->
+    <!-- <button id="my-button" onclick="console.log('I am Clicked')">Click me</button>     -->
+
+    <!--//Event Listener-->
+    <button id="my-button">Click Me</button>
+
+    <script>
+         //Event Listener (like a onClick)
+            /*
+            What is an event: occurrences like clicks, mourse movement, keyboard input.
+            Using querySelector to attach listers.
+            
+            
+            */
+           let buttonElement =  document.querySelector('#my-button');
+           let behaviour = event => console.log('I am Clicked.');
+           buttonElement.addEventListener ('click', behaviour);
+
+           // Multiple listers: You can add more than one.
+           let printDate = event => console.log(new Date());
+           buttonElement.addEventListener('click', printDate);
+
+
+            //removeEventListener('event',functionVariable);
+            //Note: for remove any event you need to declare a function like behaviour. 
+            //If you call event without declaring any function then it will be not removeable
+            buttonElement.removeEventListener('click',behaviour);
+    </script>
+</body>
+</html>
